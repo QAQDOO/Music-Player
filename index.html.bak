@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="关键词，关键字">
+  <meta name="Description" content="描述信息">
+  <title>Music 在线播放-SZM</title>
+  <style>
+  *{margin:0;
+  padding:0;}
+  body{margin:0;background:url("images/63534764_p0.jpg")center;background-repeat:no-repeat;/* background-size:100% 100%; */opacity:0.85;} 
+					
+#music{background:#666666;width:900px;height:600px;margin:110px auto;animation:runBg 10s linear infinite;border-radius:15px;overflow:hidden;box-shadow:0px 0px 5px #000;}
+
+#music .m-left{width:650px;height:530px;background:#020202;float:left;display:none;}
+
+#music .m-right{width:250px;height:530px;background:#3e3e3e;float:right;}
+#music .m-right ul{list-style:none;padding:0;width:121px;height:207px;margin:40px auto 5px;border-bottom:2px solid white;}
+#music .m-right ul img{border-radius:50%;box-shadow:0px 0px 10px #fff;}
+#music .m-right ul li:nth-child(2){text-align:center;line-height:39px;color:#fff;}
+#music .m-right .songwords{height:276px;background:#272727;text-align:center;color:#ffffff;overflow-y:auto;}
+#music .footer{width:100%;height:70px;background:-webkit-linear-gradient(90deg,#2c2c2c,#686868,#2c2c2c);float:left;}
+
+.color{color:#ff8d1c;font-size:18px;transition:0.3s;}
+
+.songwords::-webkit-scrollbar{width:5px;background:#ffffff;}
+.songwords::-webkit-scrollbar-button{width:5px;background:#a6a6a6;}
+.songwords::-webkit-scrollbar-thumb{width:5px;background:#3e3e3e;}
+
+#canvas{position:fixed;bottom:0;left:0; }
+
+
+ /* 线性渐变				#music{background:-webkit-linear-gradient(45deg,#99ff33,#ffff99,#ccffff);width:900px;height:600px;margin:110px auto;animation:runBg 10s linear infinite;}
+ 										无限渐变 */ 				
+@keyframes runBg{
+  	from{background-position:0 0;}
+  	to{background-position:-2000px -2000px;}
+  }
+  
+  </style>
+ `</head>
+<body>
+<div id="music">
+	<div class="m-left">
+		<textarea id="songwords" style="width:200px; height:300px;" >
+						[by:小弘与肥羊]
+[00:00.00]ねぇ、もしも全て投げ舍てられたら
+[00:07.00]笑って生きることが楽になるの？
+[00:13.05]また胸が痛くなるから
+[00:17.60]もう何も言わないでよ
+[00:47.75]ねぇ、もしも全て忘れられたなら
+[00:53.20]泣かないで生きることも楽になるの？
+[00:58.92]でもそんな事出来ないから
+[01:03.13]もう何も见せないでよ
+[01:09.00]君にどれだけ近づいても
+[01:14.93]仆の心臓は一つだけ
+[01:20.40]酷いよ 酷いよ、もういっそ仆の体を
+[01:26.25]壊して 引き裂いて 好きなようにしてよ
+[01:31.95]叫んで 藻掻（もが）いて 睑（まぶた）を肿らしても
+[01:37.40]まだ君は仆の事を抱きしめて离さない
+[01:43.45]もういいよ
+[01:56.00]ねぇ、もしも仆の愿いが叶うなら
+[02:01.81]君と同じものが欲しいんだ
+[02:07.65]でも仆には存在しないから
+[02:11.83]じゃあせめて此処に来てよ
+[02:42.90]君にどれだけ爱されても
+[02:49.00]仆の心臓は一つだけ
+[02:54.60]やめてよ やめてよ、优しくしないでよ
+[03:00.00]どうしても仆には理解ができないよ
+[03:06.20]痛いよ 痛いよ、言叶で教えてよ
+[03:11.70]こんなの知らないよ 独りにしないで
+[03:17.71]酷いよ 酷いよ、もういっそ仆の体を
+[03:23.40]壊して 引き裂いて 好きなようにしてよ
+[03:29.10]叫んで 藻掻（もが）いて 睑（まぶた）を肿らしても
+[03:34.00]まだ君は仆の事を抱きしめて离さない
+[03:40.60]もういいよ
+[04:06.20]ねぇ、もしも仆に心があるなら
+[04:10.21]どうやってそれを见つければいいの？
+[04:16.10]少し微笑んで君が言う
+[04:20.50]「それはね、ここにあるよ」
+
+		</textarea>
+	
+	
+	</div>
+	<div class="m-right">
+	
+	<ul>
+<!-- 用户体验三要素
+seo优化 -->
+
+<!--  1920*1080 展示 120*100
+ 不要用宽度和高度对图片缩放 -->
+	<li>
+	<marquee direction="right" onmouseover="this.stop()" onmouseout="this.start()";><img src="images/23157037_p2_master1200.jpg"  width="" ;height="";alt="描述 提供 搜索引擎";></marquee>
+	</li>
+	<li>《爱很简单》</li>
+	</ul>
+
+	<div class ="songwords"></div>
+	</div>
+
+	<div class="footer">
+	<input type="button" value="播放" id="play">
+	
+	</div>
+
+	</div>
+
+  <audio id="myMusic" src="music/小緣 - 无心.mp3"></audio>
+<canvas id="canvas" width="700" height="110"></canvas>
+<!-- 引用JQuery文件 -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/music.js"></script>
+
+  <script>
+
+
+//解析歌词js写法  
+//封装ID查找方法
+//function SZM(dom){
+//return document.getElementById(dom);
+//}
+//var lrc=SZM("myMusic");
+//console.log(lrc);
+
+
+var lrc=$("#songwords").val();
+//开始切割歌词
+var lrcArr=lrc.split("[");
+//console.log(lrcArr);
+//第二次切割歌词
+var html="";
+for(var i=0;i<lrcArr.length;i++){
+	var arr=lrcArr[i].split("]");
+	//拿到时间
+	var timer=arr[0].split(".");
+	console.log(timer);
+	var stimer=timer[0].split(":");
+	//将分钟和秒转化成秒
+	var ms=stimer[0]*60+stimer[1]*1;
+	console.log(stimer);
+	//拿到歌词
+	var message=arr[1];
+	//将歌词放入盒子容器中
+	if(message){
+		html+="<p id="+ms+">"+message+"</p>";
+	}
+	$(".songwords").html(html);
+	//console.log(arr);
+	}
+
+
+
+
+
+  var i=0;
+  //点击按钮 播放音乐
+$("#play").click(function(){	  
+	alert("蛇皮");
+		console.log($("#myMusic"));
+
+  if(i==0){
+		$("#myMusic").get(0).play();
+		i=1; 
+  }else{
+		$("#myMusic").get(0).pause();
+		i=0;
+  }
+  
+  
+  });
+  //监听当前音乐播放时间
+  $("#myMusic").get(0).addEventListener("timeupdate",function(){
+
+	  //获取当前播放的时间
+	  var timer=this.currentTime;
+	  var s=parseInt(timer);
+	  console.log(s);
+	  //通过时间来驱动歌词
+	  for(var i=0;i<s;i++){
+	  $("#"+i).addClass("color").siblings().removeClass("color");
+	  
+	  }
+	  $(".songwords").scrollTop(($(".color").index()-10)*25);
+  });
+  var music=document.getElementById("myMusic");
+  var canvas=document.getElementById("canvas");
+  audioContext(music,canvas);
+  
+  </script>
+ </body>
+</html>
